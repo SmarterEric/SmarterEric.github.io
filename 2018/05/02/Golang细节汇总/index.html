@@ -3,19 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 1 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
-  <meta property="og:type" content="website">
+  <meta name="description" content="Golang细节汇总mac goland 安装mac系统安装并配置 安装 双击pkg包，顺着指引，即可安装成功。  在命令行输入 go version，获取到go的版本号，则代表安装成功。 配置环境变量 1、打开终端输入cd ~进入用户主目录;  2、输入ls -all命令查看是否存在.bash_profile;  3、存在既使用vim .bash_profile 打开文件;  4、输入 i 进入">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/05/02/Golang细节汇总/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Golang细节汇总mac goland 安装mac系统安装并配置 安装 双击pkg包，顺着指引，即可安装成功。  在命令行输入 go version，获取到go的版本号，则代表安装成功。 配置环境变量 1、打开终端输入cd ~进入用户主目录;  2、输入ls -all命令查看是否存在.bash_profile;  3、存在既使用vim .bash_profile 打开文件;  4、输入 i 进入">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/9c0a3e77aee595f07194cb7cce079811/xmlnote/0FC740ACE2114E5DA5678F848911BCD6/32BA34A8FF704B5E95B9C9A0C93CB942/418">
+<meta property="og:updated_time" content="2018-05-02T13:53:12.531Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="Golang细节汇总mac goland 安装mac系统安装并配置 安装 双击pkg包，顺着指引，即可安装成功。  在命令行输入 go version，获取到go的版本号，则代表安装成功。 配置环境变量 1、打开终端输入cd ~进入用户主目录;  2、输入ls -all命令查看是否存在.bash_profile;  3、存在既使用vim .bash_profile 打开文件;  4、输入 i 进入">
+<meta name="twitter:image" content="https://note.youdao.com/yws/public/resource/9c0a3e77aee595f07194cb7cce079811/xmlnote/0FC740ACE2114E5DA5678F848911BCD6/32BA34A8FF704B5E95B9C9A0C93CB942/418">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -48,7 +54,7 @@
 
 
 
-  <body>
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
 
 
   
@@ -98,9 +104,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main">
-  
-    <article id="post-Golang细节汇总"  class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-Golang细节汇总" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -112,6 +116,10 @@
 
        
       
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
     </div>
     <div class="article-entry" itemprop="articleBody">
       
@@ -590,323 +598,60 @@ ReadDir(dirname)--&gt;[]FileInfo
       
       
       
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
 
-<!-- Table of Contents -->
+		       if (typeof LivereTower === 'function') { return; }
 
-  
-    <article id="post-第18章-反射"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-    <div class="article-meta">
-      
-	<a href="/2018/04/21/第18章-反射/" class="article-date">
-	  <time datetime="2018-04-21T12:53:11.000Z" itemprop="datePublished">April 21, 2018</time>
-	</a>
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
 
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#反射reflect</p>
-<h2 id="一、引入"><a href="#一、引入" class="headerlink" title="一、引入"></a>一、引入</h2><p>Java的反射机制是其标志性的特征之一，正是这种语言本身支持的强大的机制使得很多流行的框架有了用武之地。C++中虽然也能实现，但是语言本身并没有提供标准的支持。<br>而作为一门现代的语言，go语言也引入了反射机制，在这篇文章中我们将会了解一下go语言中的反射机制是如何使用的。</p>
-<p>反射机制<br>反射机制是程序能够检查其自身结构，属于元编程的范畴，强大的同时也往往是困扰的源头。虽然各种语言的反射模型有所不同，但是通过简单的比较也能有所收获。在了解Go的反射机制之前先来看看Java的反射机制吧。</p>
-<p>Java的反射机制<br>我们所熟知的Java的反射机制是什么？对于类和对象的使用，普通的方式是知道类和对象的属性和方法之后进行调用或者访问。<br>而反射机制，简单来说，是在运行状态中，Java对于任何的类，都能够确认到这个类的所有方法和属性；对于任何一个对象，都能调用它的任意方法和属性。这种动态获取或者调用的方式就是Java的反射机制。</p>
-<p>能做什么<br>在Java中，通过反射机制在运行时能够做到如下：</p>
-<p>确认对象的类<br>确认类的所有成员变量和方法<br>动态调用任意一个对象的方法<br>…</p>
-<h2 id="二、相关基础"><a href="#二、相关基础" class="headerlink" title="二、相关基础"></a>二、相关基础</h2><p>在进行更加详细的了解之前，我们需要重新温习一下Go语言相关的一些特性，所谓温故知新，从这些特性中了解其反射机制是如何使用的。</p>
-<table>
-<thead>
-<tr>
-<th>特点</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>go语言是静态类型语言。</td>
-<td>编译时类型已经确定，比如对已基本数据类型的再定义后的类型，反射时候需要确认返回的是何种类型。</td>
-</tr>
-<tr>
-<td>空接口interface{}</td>
-<td>go的反射机制是要通过接口来进行的，而类似于Java的Object的空接口可以和任何类型进行交互，因此对基本数据类型等的反射也直接利用了这一特点</td>
-</tr>
-</tbody>
-</table>
-<h2 id="三、反射的使用"><a href="#三、反射的使用" class="headerlink" title="三、反射的使用"></a>三、反射的使用</h2><p>所谓反射就是动态运行时的状态。我们一般用到的包是reflect包</p>
-<p>使用reflect一般分成三步：</p>
-<p>首先需要把它转化成reflect对象(reflect.Type或者reflect.Value，根据不同的情况调用不同的函数)</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">t := reflect.TypeOf(i) <span class="comment">//得到类型的元数据,通过t我们能获取类型定义里面的所有元素</span></span><br><span class="line">v := reflect.ValueOf(i) <span class="comment">//得到实际的值，通过v我们获取存储在里面的值，还可以去改变值</span></span><br></pre></td></tr></table></figure>
-<p>获取反射值能返回相应的类型和数值</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x <span class="keyword">float64</span> = <span class="number">3.4</span></span><br><span class="line">v := reflect.ValueOf(x)</span><br><span class="line">fmt.Println(<span class="string">"type:"</span>, v.Type())</span><br><span class="line">fmt.Println(<span class="string">"kind is float64:"</span>, v.Kind() == reflect.Float64)</span><br><span class="line">fmt.Println(<span class="string">"value:"</span>, v.Float())</span><br></pre></td></tr></table></figure>
-<p>如果是struct的话，可以使用Elem()</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tag := t.Elem().Field(<span class="number">0</span>).Tag <span class="comment">//获取定义在struct里面的Tag属性</span></span><br><span class="line">name := v.Elem().Field(<span class="number">0</span>).String() <span class="comment">//获取存储在第一个字段里面的值</span></span><br></pre></td></tr></table></figure>
-<p>修改</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x <span class="keyword">float64</span> = <span class="number">3.4</span></span><br><span class="line">p := reflect.ValueOf(&amp;x)</span><br><span class="line">v := p.Elem()<span class="comment">//必须的步骤</span></span><br><span class="line">v.SetFloat(<span class="number">7.1</span>)</span><br></pre></td></tr></table></figure>
-<p>示例代码</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"reflect"</span></span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	<span class="comment">//1.“接口类型变量”=&gt;“反射类型对象”</span></span><br><span class="line">	<span class="keyword">var</span> circle <span class="keyword">float64</span> = <span class="number">6.28</span></span><br><span class="line">	<span class="keyword">var</span> icir <span class="keyword">interface</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">	icir = circle</span><br><span class="line">	fmt.Println(<span class="string">"Reflect : circle.Value = "</span>, reflect.ValueOf(icir)) <span class="comment">//Reflect : circle.Value =  6.28</span></span><br><span class="line">	fmt.Println(<span class="string">"Reflect : circle.Type  = "</span>, reflect.TypeOf(icir)) <span class="comment">//Reflect : circle.Type =  float64</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// 2. “反射类型对象”=&gt;“接口类型变量</span></span><br><span class="line">	v1 := reflect.ValueOf(icir)</span><br><span class="line">	fmt.Println(v1) <span class="comment">//6.28</span></span><br><span class="line">	fmt.Println(v1.Interface()) <span class="comment">//6.28</span></span><br><span class="line"></span><br><span class="line">	y := v1.Interface().(<span class="keyword">float64</span>)</span><br><span class="line">	fmt.Println(y) <span class="comment">//6.28</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//v1.SetFloat(4.13) //panic: reflect: reflect.Value.SetFloat using unaddressable value</span></span><br><span class="line">	<span class="comment">//fmt.Println(v1)</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//3.修改</span></span><br><span class="line">	fmt.Println(v1.CanSet())<span class="comment">//是否可以进行修改</span></span><br><span class="line">	v2 := reflect.ValueOf(&amp;circle) <span class="comment">// 传递指针才能修改</span></span><br><span class="line">	v4:=v2.Elem()<span class="comment">// 传递指针才能修改,获取Elem()才能修改</span></span><br><span class="line">	fmt.Println(v4.CanSet()) <span class="comment">//true</span></span><br><span class="line">	v4.SetFloat(<span class="number">3.14</span>)</span><br><span class="line">	fmt.Println(circle) <span class="comment">//3.14</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="四、结构体"><a href="#四、结构体" class="headerlink" title="四、结构体"></a>四、结构体</h2><h3 id="4-1可以通过反射，获取结构体对象的属性和方法"><a href="#4-1可以通过反射，获取结构体对象的属性和方法" class="headerlink" title="4.1可以通过反射，获取结构体对象的属性和方法"></a>4.1可以通过反射，获取结构体对象的属性和方法</h3><h3 id="4-2可以通过反射，调用结构体方法"><a href="#4-2可以通过反射，调用结构体方法" class="headerlink" title="4.2可以通过反射，调用结构体方法"></a>4.2可以通过反射，调用结构体方法</h3><p>示例代码：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"reflect"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">//1.提供一个结构体</span></span><br><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123;</span><br><span class="line">	Name <span class="keyword">string</span></span><br><span class="line">	Age <span class="keyword">int</span></span><br><span class="line">	Sex <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//2.提供一个方法</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(p Person)</span> <span class="title">Say</span><span class="params">(msg <span class="keyword">string</span>)</span></span>  &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Hello.."</span>, msg)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(p Person)</span> <span class="title">PrintInfo</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	fmt.Println(<span class="string">"姓名："</span>,p.Name,<span class="string">"年龄："</span>,p.Age,<span class="string">"性别："</span>,p.Sex)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	p1:=Person&#123;<span class="string">"王二狗"</span>,<span class="number">30</span>,<span class="string">"男"</span>&#125;</span><br><span class="line">	<span class="comment">//反射使用 TypeOf 和 ValueOf 函数从接口中获取目标对象信息</span></span><br><span class="line">	<span class="comment">//1.获取对象的类型</span></span><br><span class="line">	t1:=reflect.TypeOf(p1)</span><br><span class="line">	fmt.Println(t1) <span class="comment">//main.Person</span></span><br><span class="line">	fmt.Println(<span class="string">"p1的类型是："</span>,t1.Name())<span class="comment">//调用t.Name方法来获取这个类型的名称</span></span><br><span class="line">	k1:=t1.Kind() <span class="comment">//struct</span></span><br><span class="line">	fmt.Println(k1)</span><br><span class="line">	<span class="comment">//2.获取值，如果是结构体类型，获取的是字段的值</span></span><br><span class="line">	v1:=reflect.ValueOf(p1) <span class="comment">//&#123;王二狗 30 男&#125;</span></span><br><span class="line">	fmt.Println(v1)</span><br><span class="line">	<span class="keyword">if</span> t1.Kind() == reflect.Struct&#123;</span><br><span class="line">		<span class="comment">//是结构体类型，获取里面的字段名字</span></span><br><span class="line">		fmt.Println(t1.NumField()); <span class="comment">//3</span></span><br><span class="line">		<span class="keyword">for</span> i:=<span class="number">0</span>;i&lt;t1.NumField();i++&#123;</span><br><span class="line">			field := t1.Field(i)</span><br><span class="line">			<span class="comment">//fmt.Println(field) //&#123;Name  string  0 [0] false&#125;,&#123;Age  int  16 [1] false&#125;,&#123;Sex  string  24 [2] false&#125;</span></span><br><span class="line">			val:=v1.Field(i).Interface()<span class="comment">//通过interface方法来取出这个字段所对应的值</span></span><br><span class="line">			fmt.Printf(<span class="string">"字段名字：%s,字段类型：%s,字段数值：%v\n"</span>,field.Name,field.Type,val)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">//2.操作方法</span></span><br><span class="line">	<span class="keyword">for</span> i:=<span class="number">0</span>;i&lt;t1.NumMethod();i++&#123;</span><br><span class="line">		m:=t1.Method(i)</span><br><span class="line">		fmt.Println(m.Name,m.Type) <span class="comment">//Hello func(main.Person)</span></span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		&#123;Hello  func(main.Person) &lt;func(main.Person) Value&gt; 0&#125;</span></span><br><span class="line"><span class="comment">		&#123;PrintInfo  func(main.Person) &lt;func(main.Person) Value&gt; 1&#125;</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	m1 := v1.MethodByName(<span class="string">"Say"</span>)</span><br><span class="line">	args:=[]reflect.Value&#123;reflect.ValueOf(<span class="string">"干啥呢？"</span>)&#125;</span><br><span class="line">	m1.Call(args)</span><br><span class="line"></span><br><span class="line">	m2:=v1.MethodByName(<span class="string">"PrintInfo"</span>)</span><br><span class="line">	m2.Call(<span class="literal">nil</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>结构体中包含匿名结构体</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"reflect"</span></span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Animal <span class="keyword">struct</span> &#123;</span><br><span class="line">	Name <span class="keyword">string</span></span><br><span class="line">	Age <span class="keyword">int</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> Cat <span class="keyword">struct</span> &#123;</span><br><span class="line">	Animal</span><br><span class="line">	Color <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 获取匿名字段</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	c1:= Cat&#123;Animal&#123;<span class="string">"猫咪"</span>,<span class="number">1</span>&#125;,<span class="string">"白色"</span>&#125;</span><br><span class="line">	t1:=reflect.TypeOf(c1)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> i:=<span class="number">0</span>;i&lt;t1.NumField();i++&#123;</span><br><span class="line">		fmt.Println(t1.Field(i))</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		&#123;Animal  main.Animal  0 [0] true&#125;</span></span><br><span class="line"><span class="comment">		&#123;Color  string  24 [1] false&#125;</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// FiledByIndex()的参数是一个切片，第一个数是Animal字段，第二个参数是Animal的第一个字段</span></span><br><span class="line">	f1:=t1.FieldByIndex([]<span class="keyword">int</span>&#123;<span class="number">0</span>,<span class="number">0</span>&#125;)</span><br><span class="line">	f2:=t1.FieldByIndex([]<span class="keyword">int</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;)</span><br><span class="line">	fmt.Println(f1)<span class="comment">//&#123;Name  string  0 [0] false&#125;</span></span><br><span class="line">	fmt.Println(f2) <span class="comment">//&#123;Age  int  16 [1] false&#125;</span></span><br><span class="line"></span><br><span class="line">	v1:=reflect.ValueOf(c1)</span><br><span class="line">	fmt.Println(v1.Field(<span class="number">0</span>)) <span class="comment">//&#123;猫咪 1&#125;</span></span><br><span class="line">	fmt.Println(v1.FieldByIndex([]<span class="keyword">int</span>&#123;<span class="number">0</span>,<span class="number">0</span>&#125;)) <span class="comment">//猫咪</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4-3-可以通过反射，修改结构体的数据"><a href="#4-3-可以通过反射，修改结构体的数据" class="headerlink" title="4.3.可以通过反射，修改结构体的数据"></a>4.3.可以通过反射，修改结构体的数据</h3><p>示例代码：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"reflect"</span></span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Student <span class="keyword">struct</span> &#123;</span><br><span class="line">	Name <span class="keyword">string</span></span><br><span class="line">	Age <span class="keyword">int</span></span><br><span class="line">	School <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	修改内容</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	s1:= Student&#123;<span class="string">"王二狗"</span>,<span class="number">18</span>,<span class="string">"清华大学"</span>&#125;</span><br><span class="line">	v1 := reflect.ValueOf(&amp;s1)</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> v1.Kind() ==reflect.Ptr &amp;&amp; v1.Elem().CanSet()&#123;</span><br><span class="line">		v1 = v1.Elem()</span><br><span class="line">		fmt.Println(<span class="string">"可以修改。。"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	f1:=v1.FieldByName(<span class="string">"Name"</span>)</span><br><span class="line">	fmt.Println(f1.CanSet())</span><br><span class="line">	f1.SetString(<span class="string">"王三狗"</span>)</span><br><span class="line">	f2:=v1.FieldByName(<span class="string">"Age"</span>)</span><br><span class="line">	fmt.Println(f2.CanSet())</span><br><span class="line">	f2.SetInt(<span class="number">20</span>)</span><br><span class="line">	fmt.Println(s1)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
 
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
+
+
       
     </footer>
     <hr class="entry-footer-hr">
   </div>
   
-</article>
-
-<!-- Table of Contents -->
-
+    
+<nav id="article-nav">
   
-    <article id="post-第5章-Map"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-    <div class="article-meta">
-      
-	<a href="/2018/04/03/第5章-Map/" class="article-date">
-	  <time datetime="2018-04-03T04:05:03.000Z" itemprop="datePublished">April 3, 2018</time>
-	</a>
+  
+    <a href="/2018/04/21/第18章-反射/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一、集合-Map"><a href="#一、集合-Map" class="headerlink" title="一、集合(Map)"></a>一、集合(Map)</h1><h2 id="1-1-什么是Map"><a href="#1-1-什么是Map" class="headerlink" title="1.1 什么是Map"></a>1.1 什么是Map</h2><p>map是Go中的内置类型，它将一个值与一个键关联起来。可以使用相应的键检索值。</p>
-<p>Map 是一种无序的键值对的集合。Map 最重要的一点是通过 key 来快速检索数据，key 类似于索引，指向数据的值<br>Map 是一种集合，所以我们可以像迭代数组和切片那样迭代它。不过，Map 是无序的，我们无法决定它的返回顺序，这是因为 Map 是使用 hash 表来实现的，也是引用类型</p>
-<p>使用map过程中需要注意的几点： </p>
-<ul>
-<li>map是无序的，每次打印出来的map都会不一样，它不能通过index获取，而必须通过key获取</li>
-<li>map的长度是不固定的，也就是和slice一样，也是一种引用类型</li>
-<li>内置的len函数同样适用于map，返回map拥有的key的数量 </li>
-<li>map的key可以是所有可比较的类型，如布尔型、整数型、浮点型、复杂型、字符串型……也可以键。</li>
-</ul>
-<h2 id="1-2-Map的使用"><a href="#1-2-Map的使用" class="headerlink" title="1.2  Map的使用"></a>1.2  Map的使用</h2><h3 id="1-2-1-使用make-创建map"><a href="#1-2-1-使用make-创建map" class="headerlink" title="1.2.1 使用make()创建map"></a>1.2.1 使用make()创建map</h3><p>可以使用内建函数 make 也可以使用 map 关键字来定义 Map:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 声明变量，默认 map 是 nil */</span></span><br><span class="line"><span class="keyword">var</span> map_variable <span class="keyword">map</span>[key_data_type]value_data_type</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 使用 make 函数 */</span></span><br><span class="line">map_variable = <span class="built_in">make</span>(<span class="keyword">map</span>[key_data_type]value_data_type)</span><br></pre></td></tr></table></figure>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rating := <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">float32</span> &#123;<span class="string">"C"</span>:<span class="number">5</span>, <span class="string">"Go"</span>:<span class="number">4.5</span>, <span class="string">"Python"</span>:<span class="number">4.5</span>, <span class="string">"C++"</span>:<span class="number">2</span> &#125;</span><br></pre></td></tr></table></figure>
-<p>如果不初始化 map，那么就会创建一个 nil map。nil map 不能用来存放键值对</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">   <span class="keyword">var</span> countryCapitalMap <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span></span><br><span class="line">   <span class="comment">/* 创建集合 */</span></span><br><span class="line">   countryCapitalMap = <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span>)</span><br><span class="line">   </span><br><span class="line">   <span class="comment">/* map 插入 key-value 对，各个国家对应的首都 */</span></span><br><span class="line">   countryCapitalMap[<span class="string">"France"</span>] = <span class="string">"Paris"</span></span><br><span class="line">   countryCapitalMap[<span class="string">"Italy"</span>] = <span class="string">"Rome"</span></span><br><span class="line">   countryCapitalMap[<span class="string">"Japan"</span>] = <span class="string">"Tokyo"</span></span><br><span class="line">   countryCapitalMap[<span class="string">"India"</span>] = <span class="string">"New Delhi"</span></span><br><span class="line">   </span><br><span class="line">   <span class="comment">/* 使用 key 输出 map 值 */</span></span><br><span class="line">   <span class="keyword">for</span> country := <span class="keyword">range</span> countryCapitalMap &#123;</span><br><span class="line">      fmt.Println(<span class="string">"Capital of"</span>,country,<span class="string">"is"</span>,countryCapitalMap[country])</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="comment">/* 查看元素在集合中是否存在 */</span></span><br><span class="line">   captial, ok := countryCapitalMap[<span class="string">"United States"</span>]</span><br><span class="line">   <span class="comment">/* 如果 ok 是 true, 则存在，否则不存在 */</span></span><br><span class="line">   <span class="keyword">if</span>(ok)&#123;</span><br><span class="line">      fmt.Println(<span class="string">"Capital of United States is"</span>, captial)  </span><br><span class="line">   &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">      fmt.Println(<span class="string">"Capital of United States is not present"</span>) </span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Capital of France is Paris</span><br><span class="line">Capital of Italy is Rome</span><br><span class="line">Capital of Japan is Tokyo</span><br><span class="line">Capital of India is New Delhi</span><br><span class="line">Capital of United States is not present</span><br></pre></td></tr></table></figure>
-<h3 id="1-2-2-delete-函数"><a href="#1-2-2-delete-函数" class="headerlink" title="1.2.2 delete() 函数"></a>1.2.2 delete() 函数</h3><p>delete(map, key) 函数用于删除集合的元素, 参数为 map 和其对应的 key。删除函数不返回任何值。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;   </span><br><span class="line">   <span class="comment">/* 创建 map */</span></span><br><span class="line">   countryCapitalMap := <span class="keyword">map</span>[<span class="keyword">string</span>] <span class="keyword">string</span> &#123;<span class="string">"France"</span>:<span class="string">"Paris"</span>,<span class="string">"Italy"</span>:<span class="string">"Rome"</span>,<span class="string">"Japan"</span>:<span class="string">"Tokyo"</span>,<span class="string">"India"</span>:<span class="string">"New Delhi"</span>&#125;</span><br><span class="line">   </span><br><span class="line">   fmt.Println(<span class="string">"原始 map"</span>)   </span><br><span class="line">   </span><br><span class="line">   <span class="comment">/* 打印 map */</span></span><br><span class="line">   <span class="keyword">for</span> country := <span class="keyword">range</span> countryCapitalMap &#123;</span><br><span class="line">      fmt.Println(<span class="string">"Capital of"</span>,country,<span class="string">"is"</span>,countryCapitalMap[country])</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="comment">/* 删除元素 */</span></span><br><span class="line">   <span class="built_in">delete</span>(countryCapitalMap,<span class="string">"France"</span>);</span><br><span class="line">   fmt.Println(<span class="string">"Entry for France is deleted"</span>)  </span><br><span class="line">   </span><br><span class="line">   fmt.Println(<span class="string">"删除元素后 map"</span>)   </span><br><span class="line">   </span><br><span class="line">   <span class="comment">/* 打印 map */</span></span><br><span class="line">   <span class="keyword">for</span> country := <span class="keyword">range</span> countryCapitalMap &#123;</span><br><span class="line">      fmt.Println(<span class="string">"Capital of"</span>,country,<span class="string">"is"</span>,countryCapitalMap[country])</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">原始 <span class="keyword">map</span></span><br><span class="line">Capital of France is Paris</span><br><span class="line">Capital of Italy is Rome</span><br><span class="line">Capital of Japan is Tokyo</span><br><span class="line">Capital of India is New Delhi</span><br><span class="line">Entry <span class="keyword">for</span> France is deleted</span><br><span class="line">删除元素后 <span class="keyword">map</span></span><br><span class="line">Capital of Italy is Rome</span><br><span class="line">Capital of Japan is Tokyo</span><br><span class="line">Capital of India is New Delhi</span><br></pre></td></tr></table></figure>
-<h3 id="1-2-3-ok-idiom"><a href="#1-2-3-ok-idiom" class="headerlink" title="1.2.3 ok-idiom"></a>1.2.3 ok-idiom</h3><p>我们可以通过key获取map中对应的value值。语法为：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">map</span>[key]</span><br></pre></td></tr></table></figure>
-<p>但是当key如果不存在的时候，我们会得到该value值类型的默认值，比如string类型得到空字符串，int类型得到0。但是程序不会报错。</p>
-<p>所以我们可以使用ok-idiom获取值，可知道key/value是否存在</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">value, ok := <span class="keyword">map</span>[key]</span><br></pre></td></tr></table></figure>
-<p>示例代码：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	m := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>)</span><br><span class="line">	m[<span class="string">"a"</span>] = <span class="number">1</span></span><br><span class="line">	x, ok := m[<span class="string">"b"</span>]</span><br><span class="line">	fmt.Println(x, ok)</span><br><span class="line">	x, ok = m[<span class="string">"a"</span>]</span><br><span class="line">	fmt.Println(x, ok)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="literal">false</span></span><br><span class="line"><span class="number">1</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h3 id="1-2-4-map的长度"><a href="#1-2-4-map的长度" class="headerlink" title="1.2.4 map的长度"></a>1.2.4 map的长度</h3><p>使用len函数可以确定map的长度。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>(<span class="keyword">map</span>)  <span class="comment">// 可以得到map的长度</span></span><br></pre></td></tr></table></figure>
-<h3 id="1-2-5-map是引用类型的"><a href="#1-2-5-map是引用类型的" class="headerlink" title="1.2.5 map是引用类型的"></a>1.2.5 map是引用类型的</h3><p>与切片相似，映射是引用类型。当将映射分配给一个新变量时，它们都指向相同的内部数据结构。因此，一个的变化会反映另一个。</p>
-<p>示例代码：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (  </span><br><span class="line">    <span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;  </span><br><span class="line">    personSalary := <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>&#123;</span><br><span class="line">        <span class="string">"steve"</span>: <span class="number">12000</span>,</span><br><span class="line">        <span class="string">"jamie"</span>: <span class="number">15000</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    personSalary[<span class="string">"mike"</span>] = <span class="number">9000</span></span><br><span class="line">    fmt.Println(<span class="string">"Original person salary"</span>, personSalary)</span><br><span class="line">    newPersonSalary := personSalary</span><br><span class="line">    newPersonSalary[<span class="string">"mike"</span>] = <span class="number">18000</span></span><br><span class="line">    fmt.Println(<span class="string">"Person salary changed"</span>, personSalary)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Original person salary map[steve:12000 jamie:15000 mike:9000]  </span><br><span class="line">Person salary changed map[steve:12000 jamie:15000 mike:18000]</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>map不能使用==操作符进行比较。==只能用来检查map是否为空。否则会报错：invalid operation: map1 == map2 (map can only be comparedto nil)</p>
-</blockquote>
-<p><strong>make、new操作</strong></p>
-<p>make用于内建类型（map、slice 和channel）的内存分配。new用于各种类型的内存分配<br>内建函数new本质上说跟其它语言中的同名函数功能一样：new(T)分配了零值填充的T类型的内存空间，并且返回其地址，即一个*T类型的值。用Go的术语说，它返回了一个指针，指向新分配的类型T的零值。有一点非常重要：<br>new返回指针</p>
-<p>内建函数make(T, args)与new(T)有着不同的功能，make只能创建slice、map和channel，并且返回一个有初<br>始值(非零)的T类型，而不是*T。本质来讲，导致这三个类型有所不同的原因是指向数据结构的引用在使用前必须被初始化。例如，一个slice，是一个包含指向数据（内部array）的指针、长度和容量的三项描述符；在这些项目被初始化之前，slice为nil。对于slice、map和channel来说，make初始化了内部的数据结构，填充适当的值。</p>
-<p>make返回初始化后的（非零）值。</p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
   
 </article>
 
 <!-- Table of Contents -->
 
-  
-
-
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Golang细节汇总"><span class="nav-number">1.</span> <span class="nav-text">Golang细节汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mac-goland-安装"><span class="nav-number">1.1.</span> <span class="nav-text">mac goland 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原码，反码，补码"><span class="nav-number">1.2.</span> <span class="nav-text">原码，反码，补码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#switch-fallthrough用法"><span class="nav-number">1.3.</span> <span class="nav-text">switch fallthrough用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#select-语句"><span class="nav-number">1.4.</span> <span class="nav-text">select 语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#slice-array切片和数组的创建"><span class="nav-number">1.5.</span> <span class="nav-text">slice,array切片和数组的创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#slice-copy和append方法"><span class="nav-number">1.6.</span> <span class="nav-text">slice copy和append方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map-字典"><span class="nav-number">1.7.</span> <span class="nav-text">Map 字典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string字符串"><span class="nav-number">1.8.</span> <span class="nav-text">string字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#func（）函数"><span class="nav-number">1.9.</span> <span class="nav-text">func（）函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#panic-和recover"><span class="nav-number">1.10.</span> <span class="nav-text">panic()和recover()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指针"><span class="nav-number">1.11.</span> <span class="nav-text">指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new-和make-区别"><span class="nav-number">1.12.</span> <span class="nav-text">new()和make()区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构体struct"><span class="nav-number">1.13.</span> <span class="nav-text">结构体struct{}</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法methed"><span class="nav-number">1.14.</span> <span class="nav-text">方法methed</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-什么是方法"><span class="nav-number">1.14.1.</span> <span class="nav-text">1.1 什么是方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-方法的语法"><span class="nav-number">1.14.2.</span> <span class="nav-text">1.2 方法的语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-方法和函数"><span class="nav-number">1.14.3.</span> <span class="nav-text">1.3 方法和函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-变量作用域"><span class="nav-number">1.14.4.</span> <span class="nav-text">1.4 变量作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-method继承"><span class="nav-number">1.14.5.</span> <span class="nav-text">1.5 method继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-method重写"><span class="nav-number">1.14.6.</span> <span class="nav-text">1.6 method重写</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#包package"><span class="nav-number">1.15.</span> <span class="nav-text">包package</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-error"><span class="nav-number">1.15.1.</span> <span class="nav-text">一.error</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-strconv：字符串和基本类型之间的转换"><span class="nav-number">1.15.2.</span> <span class="nav-text">二.strconv：字符串和基本类型之间的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-math包"><span class="nav-number">1.15.3.</span> <span class="nav-text">三.math包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-time包"><span class="nav-number">1.15.4.</span> <span class="nav-text">四.time包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件读写-read-write"><span class="nav-number">1.16.</span> <span class="nav-text">文件读写 read()  write()</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
 </section>
-          <aside id="sidebar">
-  
-    <div style="margin: 20px 0;">
-	<div id="search-form-wrap">
-
-    <form class="search-form">
-        <label style="width: 72%;">
-            <span class="screen-reader-text">Search for:</span>
-            <input type="search" class="search-field" style="height: 36px; width: 100%;" placeholder=" Search…" value="" name="s" title="Search for:">
-        </label>
-        <input type="submit" class="search-form-submit" value="Search">
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..."/>
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-<script src="/js/insight.js"></script>
-
-</div>
-</div>
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Connect With Us</h3>
-    <div class="widget widget_athemes_social_icons">
-
-    	<ul class="clearfix widget-social-icons">   
-    	
-   			<li><a href="https://github.com/SmarterEric" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="https://baidu.com" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
-
-   		
-   		</ul>
-
-
-   		<!--
-   		<ul class="clearfix widget-social-icons">   		
-   		<li class="widget-si-twitter"><a href="http://twitter.com" title="Twitter"><i class="ico-twitter"></i></a></li> 
-		<li class="widget-si-facebook"><a href="http://facebook.com" title="Facebook"><i class="ico-facebook"></i></a></li>
-			<li class="widget-si-gplus"><a href="http://plus.google.com" title="Google+"><i class="ico-gplus"></i></a></li>
-			<li class="widget-si-pinterest"><a href="http://pinterest.com" title="Pinterest"><i class="ico-pinterest"></i></a></li>
-			<li class="widget-si-flickr"><a href="http://flickr.com" title="Flickr"><i class="ico-flickr"></i></a></li>
-			<li class="widget-si-instagram"><a href="http://instagram.com" title="Instagram"><i class="ico-instagram"></i></a></li>
-		</ul> -->
-
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget_athemes_tabs">
-    <ul id="widget-tab" class="clearfix widget-tab-nav">
-      <li class="active"><a>Recent Posts</a></li>
-    </ul>
-    <div class="widget">
-      <ul>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2018/05/02/Golang细节汇总/">(no title)</a></h6>
-              <span>May 2, 2018</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2018/04/21/第18章-反射/">(no title)</a></h6>
-              <span>April 21, 2018</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2018/04/03/第5章-Map/">(no title)</a></h6>
-              <span>April 3, 2018</span>
-            </div>
-
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li></ul>
-    </div>
-  </div>
-
-
-  
-</aside>
         
       </div>
 
