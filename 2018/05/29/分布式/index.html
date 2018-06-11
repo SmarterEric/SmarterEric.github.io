@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    <script src="/js/pace.min.js"></script>
+    <link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="分布式##etcd - 一个分布式一致性键值存储系统 etcd是一个分布式一致性键值存储系统，用于共享配置和服务发现，专注于：  简单:良好定义的，面向用户的API (gRPC)  安全： 带有可选客户端证书认证的自动TLS  快速:测试验证，每秒10000写入  可靠:使用Raft适当分布   etcd是Go编写，并使用Raft一致性算法来管理高可用复制日志，架构如下图所示： 下载安装12345">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/05/29/分布式/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="分布式##etcd - 一个分布式一致性键值存储系统 etcd是一个分布式一致性键值存储系统，用于共享配置和服务发现，专注于：  简单:良好定义的，面向用户的API (gRPC)  安全： 带有可选客户端证书认证的自动TLS  快速:测试验证，每秒10000写入  可靠:使用Raft适当分布   etcd是Go编写，并使用Raft一致性算法来管理高可用复制日志，架构如下图所示： 下载安装12345">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-29T12:32:43.796Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="分布式##etcd - 一个分布式一致性键值存储系统 etcd是一个分布式一致性键值存储系统，用于共享配置和服务发现，专注于：  简单:良好定义的，面向用户的API (gRPC)  安全： 带有可选客户端证书认证的自动TLS  快速:测试验证，每秒10000写入  可靠:使用Raft适当分布   etcd是Go编写，并使用Raft一致性算法来管理高可用复制日志，架构如下图所示： 下载安装12345">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/my.css">
+  <!-- Google Adsense -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-0123456789ABCDEF",
+          enable_page_level_ads: true
+      });
+  </script>
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Hexo" rel="home"> Hexo </a>
+            
+          </h1>
+
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-分布式" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2018/05/29/分布式/" class="article-date">
+	  <time datetime="2018-05-29T01:37:01.622Z" itemprop="datePublished">五月 29, 2018</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h1><p>##etcd - 一个分布式一致性键值存储系统</p>
+<p>etcd是一个分布式一致性键值存储系统，用于共享配置和服务发现，专注于：</p>
+<ul>
+<li><p>简单:良好定义的，面向用户的API (gRPC)</p>
+</li>
+<li><p>安全： 带有可选客户端证书认证的自动TLS</p>
+</li>
+<li><p>快速:测试验证，每秒10000写入</p>
+</li>
+<li><p>可靠:使用Raft适当分布</p>
+</li>
+</ul>
+<p>etcd是Go编写，并使用Raft一致性算法来管理高可用复制日志，架构如下图所示：</p>
+<h3 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//新建文件coreos</span><br><span class="line">$ mkdir -p $GOPATH/src/github.com/coreos</span><br><span class="line">//进到coreos目录下</span><br><span class="line">$ cd coreos</span><br><span class="line">$ git clone https://github.com/coreos/etcd.git</span><br><span class="line">$ cd etcd</span><br><span class="line">$ ./build</span><br><span class="line">$ ./bin/etcd</span><br></pre></td></tr></table></figure>
+<p>另外一种下载安装的方法：</p>
+<p>直接下载etcd二进制 （包含etcd、etcdctl）<br><a href="https://github.com/coreos/etcd/releases" target="_blank" rel="noopener">https://github.com/coreos/etcd/releases</a></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//进入到coreos下的etcd目录下</span><br><span class="line">$ cd $GOPATH/src/github.com/coreos/etcd</span><br><span class="line">//执行之前编译的etcd</span><br><span class="line">$ ./bin/etcd</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//新开一个终端</span><br><span class="line">//进入etcd目录下</span><br><span class="line">$ cd $GOPATH/src/github.com/coreos/etcd</span><br><span class="line">$ ETCDCTL_API=3 ./bin/etcdctl put foo bar</span><br><span class="line"></span><br><span class="line"># 输出结果显示OK，表示安装成功</span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
+<h3 id="搭建本地集群"><a href="#搭建本地集群" class="headerlink" title="搭建本地集群"></a>搭建本地集群</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//安装多进程管理工具</span><br><span class="line">$ go get github.com/mattn/goreman</span><br><span class="line"></span><br><span class="line">$ cd $GOPATH/src/github.com/coreos/etcd</span><br><span class="line">$ goreman -f Procfile start</span><br></pre></td></tr></table></figure>
+<p>查看本地集群的服务器列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ cd $GOPATH/src/github.com/coreos/etcd</span><br><span class="line"></span><br><span class="line">$ ./bin/etcdctl member list</span><br><span class="line"></span><br><span class="line"># 显示结果</span><br><span class="line"></span><br><span class="line">8211f1d0f64f3269: name=infra1 peerURLs=http://127.0.0.1:12380 clientURLs=http://127.0.0.1:2379 isLeader=false</span><br><span class="line">91bc3c398fb3c146: name=infra2 peerURLs=http://127.0.0.1:22380 clientURLs=http://127.0.0.1:22379 isLeader=true</span><br><span class="line">fd422379fda50e48: name=infra3 peerURLs=http://127.0.0.1:32380 clientURLs=http://127.0.0.1:32379 isLeader=false</span><br></pre></td></tr></table></figure>
+<h3 id="存储数据"><a href="#存储数据" class="headerlink" title="存储数据"></a>存储数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">export ETCDCTL_API=3</span><br><span class="line"></span><br><span class="line">$ ./bin/etcdctl put foo &quot;Hello World&quot;</span><br><span class="line"></span><br><span class="line">OK</span><br><span class="line"></span><br><span class="line">$ ./bin/etcdctl get foo</span><br><span class="line"></span><br><span class="line">foo</span><br><span class="line">Hello World!</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ ./bin/etcdctl  --write-out=&quot;json&quot; get foo</span><br><span class="line"></span><br><span class="line">&#123;&quot;header&quot;:&#123;&quot;cluster_id&quot;:17237436991929493444,&quot;member_id&quot;:9372538179322589801,&quot;revision&quot;:2,&quot;raft_term&quot;:2&#125;,&quot;kvs&quot;:[&#123;&quot;key&quot;:&quot;Zm9v&quot;,&quot;create_revision&quot;:2,&quot;mod_revision&quot;:2,&quot;version&quot;:1,&quot;value&quot;:&quot;SGVsbG8gV29ybGQh&quot;&#125;],&quot;count&quot;:1&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="根据前缀查询"><a href="#根据前缀查询" class="headerlink" title="根据前缀查询"></a>根据前缀查询</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ ./bin/etcdctl put web1 value1</span><br><span class="line">$ ./bin/etcdctl put web2 value2</span><br><span class="line">$ ./bin/etcdctl put web3 value3</span><br><span class="line"></span><br><span class="line">$ ./bin/etcdctl get web --prefix</span><br><span class="line"></span><br><span class="line">web1</span><br><span class="line">value1</span><br><span class="line">web2</span><br><span class="line">value2</span><br><span class="line">web3</span><br><span class="line">value3</span><br></pre></td></tr></table></figure>
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ ./bin/etcdctl put key myvalue</span><br><span class="line">$ ./bin/etcdctl del key</span><br><span class="line">1</span><br><span class="line">$ ./bin/etcdctl get key</span><br><span class="line">// 查询结果为空</span><br><span class="line"></span><br><span class="line">$ ./bin/etcdctl put k1 value1</span><br><span class="line">$ ./bin/etcdctl put k2 value2</span><br><span class="line">$ ./bin/etcdctl del k --prefix</span><br><span class="line">2</span><br><span class="line">$ ./bin/etcdctl get k --prefix</span><br><span class="line">// 查询结果为空</span><br></pre></td></tr></table></figure>
+<h3 id="事务写入"><a href="#事务写入" class="headerlink" title="事务写入"></a>事务写入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">$ ./bin/etcdctl put user1 bad</span><br><span class="line">OK</span><br><span class="line">$ ./bin/etcdctl txn --interactive//进行事物交互</span><br><span class="line"></span><br><span class="line">compares:</span><br><span class="line">// 输入以下内容，输入结束按 两次回车</span><br><span class="line">value(&quot;user1&quot;) = &quot;bad&quot;      </span><br><span class="line"></span><br><span class="line">//如果 user1 = bad，则执行 get user1 </span><br><span class="line">success requests (get, put, del):</span><br><span class="line">get user1</span><br><span class="line"></span><br><span class="line">//如果 user1 != bad，则执行 put user1 good</span><br><span class="line">failure requests (get, put, del):</span><br><span class="line">put user1 good</span><br><span class="line"></span><br><span class="line">// 运行结果，执行 success</span><br><span class="line">SUCCESS</span><br><span class="line"></span><br><span class="line">user1</span><br><span class="line">bad</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ ./bin/etcdctl txn --interactive</span><br><span class="line">compares:</span><br><span class="line">value(&quot;user1&quot;) = &quot;111&quot;  </span><br><span class="line"></span><br><span class="line">// 如果 user1 = 111，则执行 get user1 </span><br><span class="line">success requests (get, put, del):</span><br><span class="line">get user1</span><br><span class="line"></span><br><span class="line">//如果 user1 != 111，则执行 put user1 2222</span><br><span class="line">failure requests (get, put, del):</span><br><span class="line">put user1 2222</span><br><span class="line"></span><br><span class="line">// 运行结果，执行 failure</span><br><span class="line">FAILURE</span><br><span class="line"></span><br><span class="line">OK</span><br><span class="line"></span><br><span class="line">$ ./bin/etcdctl get user1</span><br><span class="line">user1</span><br><span class="line">2222</span><br></pre></td></tr></table></figure>
+<h3 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 当 stock1 的数值改变（ put 方法）的时候，watch 会收到通知</span><br><span class="line">$ ./bin/etcdctl watch stock1</span><br><span class="line"></span><br><span class="line">// 新打开终端</span><br><span class="line">$ export ETCDCTL_API=3</span><br><span class="line">$ ./bin/etcdctl put stock1 1000</span><br><span class="line"></span><br><span class="line">//在watch 终端显示</span><br><span class="line">PUT</span><br><span class="line">stock1</span><br><span class="line">1000</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ ./bin/etcdctl watch stock --prefix</span><br><span class="line">$ ./bin/etcdctl put stock1 10</span><br><span class="line">$ ./bin/etcdctl put stock2 20</span><br></pre></td></tr></table></figure>
+<h3 id="lease-租期"><a href="#lease-租期" class="headerlink" title="lease//租期"></a>lease//租期</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">在bin目录下./bin</span><br><span class="line">$ ./etcdctl lease grant 300</span><br><span class="line"># lease 326963a02758b527 granted with TTL(300s)</span><br><span class="line"></span><br><span class="line">$ ./etcdctl put sample value -- lease=326963a02758b527</span><br><span class="line">OK</span><br><span class="line"></span><br><span class="line">$ ./etcdctl get sample</span><br><span class="line"></span><br><span class="line">$ ./etcdctl lease keep-alive 326963a02758b520</span><br><span class="line">$ ./etcdctl lease revoke 326963a02758b527//撤权</span><br><span class="line">lease 326963a02758b527 revoked</span><br><span class="line"></span><br><span class="line"># or after 300 seconds</span><br><span class="line">$ ./etcdctl get sample</span><br></pre></td></tr></table></figure>
+<h3 id="Distributed-locks"><a href="#Distributed-locks" class="headerlink" title="Distributed locks"></a>Distributed locks</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//第一终端</span><br><span class="line">$ ./etcdctl lock mutex1</span><br><span class="line">mutex1/326963a02758b52d</span><br><span class="line"></span><br><span class="line"># 第二终端</span><br><span class="line">$ ./etcdctl lock mutex1</span><br><span class="line"></span><br><span class="line">// 当第一个终端结束了用命令control C停止，第二个终端会显示</span><br><span class="line">mutex1/326963a02758b531</span><br></pre></td></tr></table></figure>
+<h3 id="Elections"><a href="#Elections" class="headerlink" title="Elections"></a>Elections</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ ./bin/etcdctl elect one p1</span><br><span class="line"></span><br><span class="line">one/326963a02758b539</span><br><span class="line">p1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># another client with the same name blocks</span><br><span class="line">$ ./bin/etcdctl elect one p2</span><br><span class="line"></span><br><span class="line">//结束第一终端，第二终端显示</span><br><span class="line">one/326963a02758b53e</span><br><span class="line">p2</span><br></pre></td></tr></table></figure>
+<h3 id="Cluster-status"><a href="#Cluster-status" class="headerlink" title="Cluster status"></a>Cluster status</h3><p>集群状态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ./bin/etcdctl --write-out=table endpoint status</span><br><span class="line"></span><br><span class="line">$ ./bin/etcdctl endpoint health</span><br></pre></td></tr></table></figure>
+<h3 id="Snapshot"><a href="#Snapshot" class="headerlink" title="Snapshot"></a>Snapshot</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">./bin/etcdctl snapshot save my.db</span><br><span class="line"></span><br><span class="line">Snapshot saved at my.db</span><br><span class="line"></span><br><span class="line">./bin/etcdctl --write-out=table snapshot status my.db</span><br></pre></td></tr></table></figure>
+<h3 id="Member"><a href="#Member" class="headerlink" title="Member"></a>Member</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/etcdctl member list -w table</span><br></pre></td></tr></table></figure>
+<p>##etcd 多台服务器集群</p>
+<p>###去除缓存<br>在etcd目录下在终端执行make clean，清除缓存。</p>
+<h3 id="下载安装-etcd"><a href="#下载安装-etcd" class="headerlink" title="下载安装 etcd"></a>下载安装 etcd</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir -p $GOPATH/src/github.com/coreos</span><br><span class="line">$ cd coreos</span><br><span class="line">$ git clone https://github.com/coreos/etcd.git</span><br><span class="line">$ cd etcd</span><br><span class="line">$ ./build</span><br></pre></td></tr></table></figure>
+<p>###终端运行export ETCDCTL_API=3</p>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><p>每个节点都要执行以下配置，HOST_1、HOST_2、HOST_3 分别设置为多台服务器的IP</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">TOKEN=token-01</span><br><span class="line">CLUSTER_STATE=new</span><br><span class="line">NAME_1=machine-1</span><br><span class="line">NAME_2=machine-2</span><br><span class="line">NAME_3=machine-3</span><br><span class="line">HOST_1=192.168.1.126</span><br><span class="line">HOST_2=192.168.1.119</span><br><span class="line">HOST_3=192.168.1.103</span><br><span class="line">CLUSTER=$&#123;NAME_1&#125;=http://$&#123;HOST_1&#125;:2380,$&#123;NAME_2&#125;=http://$&#123;HOST_2&#125;:2380,$&#123;NAME_3&#125;=http://$&#123;HOST_3&#125;:2380</span><br></pre></td></tr></table></figure>
+<p><strong>machine 1</strong> 执行如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ cd $GOPATH/src/github.com/coreos/etcd/bin</span><br><span class="line"></span><br><span class="line"># For machine 1</span><br><span class="line">THIS_NAME=$&#123;NAME_1&#125;</span><br><span class="line">THIS_IP=$&#123;HOST_1&#125;</span><br><span class="line">./etcd --data-dir=data.etcd --name $&#123;THIS_NAME&#125; --initial-advertise-peer-urls http://$&#123;THIS_IP&#125;:2380 --listen-peer-urls http://$&#123;THIS_IP&#125;:2380 --advertise-client-urls http://$&#123;THIS_IP&#125;:2379 --listen-client-urls http://$&#123;THIS_IP&#125;:2379 --initial-cluster $&#123;CLUSTER&#125; --initial-cluster-state $&#123;CLUSTER_STATE&#125; --initial-cluster-token $&#123;TOKEN&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>machine 2</strong> 执行如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ cd $GOPATH/src/github.com/coreos/etcd/bin</span><br><span class="line"></span><br><span class="line"># For machine 2</span><br><span class="line">THIS_NAME=$&#123;NAME_2&#125;</span><br><span class="line">THIS_IP=$&#123;HOST_2&#125;</span><br><span class="line">./etcd --data-dir=data.etcd --name $&#123;THIS_NAME&#125; --initial-advertise-peer-urls http://$&#123;THIS_IP&#125;:2380 --listen-peer-urls http://$&#123;THIS_IP&#125;:2380 --advertise-client-urls http://$&#123;THIS_IP&#125;:2379 --listen-client-urls http://$&#123;THIS_IP&#125;:2379 --initial-cluster $&#123;CLUSTER&#125; --initial-cluster-state $&#123;CLUSTER_STATE&#125; --initial-cluster-token $&#123;TOKEN&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>machine 3</strong> 执行如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ cd $GOPATH/src/github.com/coreos/etcd/bin</span><br><span class="line"></span><br><span class="line"># For machine 3</span><br><span class="line">THIS_NAME=$&#123;NAME_3&#125;</span><br><span class="line">THIS_IP=$&#123;HOST_3&#125;</span><br><span class="line">./etcd --data-dir=data.etcd --name $&#123;THIS_NAME&#125; --initial-advertise-peer-urls http://$&#123;THIS_IP&#125;:2380 --listen-peer-urls http://$&#123;THIS_IP&#125;:2380 --advertise-client-urls http://$&#123;THIS_IP&#125;:2379 --listen-client-urls http://$&#123;THIS_IP&#125;:2379 --initial-cluster $&#123;CLUSTER&#125; --initial-cluster-state $&#123;CLUSTER_STATE&#125; --initial-cluster-token $&#123;TOKEN&#125;</span><br></pre></td></tr></table></figure>
+<p>检测服务器运行是否正常,开启新的终端。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ cd $GOPATH/src/github.com/coreos/etcd/bin</span><br><span class="line"></span><br><span class="line">export ETCDCTL_API=3</span><br><span class="line">HOST_1=192.168.1.126</span><br><span class="line">HOST_2=192.168.1.119</span><br><span class="line">HOST_3=192.168.1.103</span><br><span class="line">ENDPOINTS=$HOST_1:2379,$HOST_2:2379,$HOST_3:2379</span><br><span class="line"></span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS member list</span><br></pre></td></tr></table></figure>
+<h3 id="存储数据-1"><a href="#存储数据-1" class="headerlink" title="存储数据"></a>存储数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS put foo &quot;Hello World&quot;//!号不能存</span><br><span class="line"></span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS get foo</span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS --write-out=&quot;json&quot; get foo</span><br></pre></td></tr></table></figure>
+<h3 id="根据前缀查询-1"><a href="#根据前缀查询-1" class="headerlink" title="根据前缀查询"></a>根据前缀查询</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS put web1 value1</span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS put web2 value2</span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS put web3 value3</span><br><span class="line"></span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS get web --prefix</span><br><span class="line"></span><br><span class="line">web1</span><br><span class="line">value1</span><br><span class="line">web2</span><br><span class="line">value2</span><br><span class="line">web3</span><br><span class="line">value3</span><br></pre></td></tr></table></figure>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS put key myvalue</span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS del key</span><br><span class="line"></span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS put k1 value1</span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS put k2 value2</span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS del k --prefix</span><br></pre></td></tr></table></figure>
+<h3 id="事务写入-1"><a href="#事务写入-1" class="headerlink" title="事务写入"></a>事务写入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">$ ./etcdctl --endpoints=$ENDPOINTS put user1 bad</span><br><span class="line">OK</span><br><span class="line"></span><br><span class="line">$ ./etcdctl --endpoints=$ENDPOINTS txn --interactive</span><br><span class="line"></span><br><span class="line">compares:</span><br><span class="line">// 输入以下内容，输入结束按 两次回车</span><br><span class="line">value(&quot;user1&quot;) = &quot;bad&quot;      </span><br><span class="line"></span><br><span class="line">//如果 user1 = bad，则执行 get user1 </span><br><span class="line">success requests (get, put, del):</span><br><span class="line">get user1</span><br><span class="line"></span><br><span class="line">//如果 user1 != bad，则执行 put user1 good</span><br><span class="line">failure requests (get, put, del):</span><br><span class="line">put user1 good</span><br><span class="line"></span><br><span class="line">// 运行结果，执行 success</span><br><span class="line">SUCCESS</span><br><span class="line"></span><br><span class="line">user1</span><br><span class="line">bad</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ ./etcdctl --endpoints=$ENDPOINTS txn --interactive</span><br><span class="line">compares:</span><br><span class="line">value(&quot;user1&quot;) = &quot;111&quot;  </span><br><span class="line"></span><br><span class="line">// 如果 user1 = 111，则执行 get user1 </span><br><span class="line">success requests (get, put, del):</span><br><span class="line">get user1</span><br><span class="line"></span><br><span class="line">//如果 user1 != 111，则执行 put user1 2222</span><br><span class="line">failure requests (get, put, del):</span><br><span class="line">put user1 2222</span><br><span class="line"></span><br><span class="line">// 运行结果，执行 failure</span><br><span class="line">FAILURE</span><br><span class="line"></span><br><span class="line">OK</span><br><span class="line"></span><br><span class="line">$ ./etcdctl --endpoints=$ENDPOINTS get user1</span><br><span class="line">user1</span><br><span class="line">2222</span><br></pre></td></tr></table></figure>
+<h3 id="watch-1"><a href="#watch-1" class="headerlink" title="watch"></a>watch</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 当 stock1 的数值改变（ put 方法）的时候，watch 会收到通知</span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS watch stock1</span><br><span class="line"></span><br><span class="line">// 新打开终端</span><br><span class="line">$ cd $GOPATH/src/github.com/coreos/etcd/bin</span><br><span class="line"></span><br><span class="line">export ETCDCTL_API=3</span><br><span class="line">HOST_1=192.168.1.126</span><br><span class="line">HOST_2=192.168.1.119</span><br><span class="line">HOST_3=192.168.1.103</span><br><span class="line">ENDPOINTS=$HOST_1:2379,$HOST_2:2379,$HOST_3:2379</span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS put stock1 1000</span><br><span class="line"></span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS watch stock --prefix</span><br><span class="line"></span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS put stock1 10</span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS put stock2 20</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: '打赏支持', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'images/wechat.jpg',
+  alipayImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg'
+});
+</script>
+      
+            
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/05/29/分布式终端与go编程添加和删除节点/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/05/28/Unmarshal及json标签和marshal/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式"><span class="nav-number">1.</span> <span class="nav-text">分布式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载安装"><span class="nav-number">1.0.1.</span> <span class="nav-text">下载安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试"><span class="nav-number">1.0.2.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建本地集群"><span class="nav-number">1.0.3.</span> <span class="nav-text">搭建本地集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储数据"><span class="nav-number">1.0.4.</span> <span class="nav-text">存储数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据前缀查询"><span class="nav-number">1.0.5.</span> <span class="nav-text">根据前缀查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据"><span class="nav-number">1.0.6.</span> <span class="nav-text">删除数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事务写入"><span class="nav-number">1.0.7.</span> <span class="nav-text">事务写入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#watch"><span class="nav-number">1.0.8.</span> <span class="nav-text">watch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lease-租期"><span class="nav-number">1.0.9.</span> <span class="nav-text">lease//租期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Distributed-locks"><span class="nav-number">1.0.10.</span> <span class="nav-text">Distributed locks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Elections"><span class="nav-number">1.0.11.</span> <span class="nav-text">Elections</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cluster-status"><span class="nav-number">1.0.12.</span> <span class="nav-text">Cluster status</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Snapshot"><span class="nav-number">1.0.13.</span> <span class="nav-text">Snapshot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Member"><span class="nav-number">1.0.14.</span> <span class="nav-text">Member</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载安装-etcd"><span class="nav-number">1.0.15.</span> <span class="nav-text">下载安装 etcd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务"><span class="nav-number">1.0.16.</span> <span class="nav-text">启动服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储数据-1"><span class="nav-number">1.0.17.</span> <span class="nav-text">存储数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据前缀查询-1"><span class="nav-number">1.0.18.</span> <span class="nav-text">根据前缀查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除"><span class="nav-number">1.0.19.</span> <span class="nav-text">删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事务写入-1"><span class="nav-number">1.0.20.</span> <span class="nav-text">事务写入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#watch-1"><span class="nav-number">1.0.21.</span> <span class="nav-text">watch</span></a></li></ol></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2018 Hexo All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+<script src="/js/my.js"></script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

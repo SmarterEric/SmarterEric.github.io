@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    <script src="/js/pace.min.js"></script>
+    <link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="分布式终端与go编程添加和删除节点##1.首先在终端执行起来一个节点./etcd –name htcd0 –initial-advertise-peer-urls http://127.0.0.1:2380 –listen-peer-urls http://127.0.0.1:2380 –listen-client-urls tp://127.0.0.1:2379 –advertise-clien">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/05/29/分布式终端与go编程添加和删除节点/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="分布式终端与go编程添加和删除节点##1.首先在终端执行起来一个节点./etcd –name htcd0 –initial-advertise-peer-urls http://127.0.0.1:2380 –listen-peer-urls http://127.0.0.1:2380 –listen-client-urls tp://127.0.0.1:2379 –advertise-clien">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-29T13:12:59.161Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="分布式终端与go编程添加和删除节点##1.首先在终端执行起来一个节点./etcd –name htcd0 –initial-advertise-peer-urls http://127.0.0.1:2380 –listen-peer-urls http://127.0.0.1:2380 –listen-client-urls tp://127.0.0.1:2379 –advertise-clien">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/my.css">
+  <!-- Google Adsense -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-0123456789ABCDEF",
+          enable_page_level_ads: true
+      });
+  </script>
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Hexo" rel="home"> Hexo </a>
+            
+          </h1>
+
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-分布式终端与go编程添加和删除节点" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2018/05/29/分布式终端与go编程添加和删除节点/" class="article-date">
+	  <time datetime="2018-05-29T12:38:20.142Z" itemprop="datePublished">五月 29, 2018</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="分布式终端与go编程添加和删除节点"><a href="#分布式终端与go编程添加和删除节点" class="headerlink" title="分布式终端与go编程添加和删除节点"></a>分布式终端与go编程添加和删除节点</h1><p>##1.首先在终端执行起来一个节点<br>./etcd –name htcd0 –initial-advertise-peer-urls <a href="http://127.0.0.1:2380" target="_blank" rel="noopener">http://127.0.0.1:2380</a> –listen-peer-urls <a href="http://127.0.0.1:2380" target="_blank" rel="noopener">http://127.0.0.1:2380</a> –listen-client-urls tp://127.0.0.1:2379 –advertise-client-urls <a href="http://127.0.0.1:2379" target="_blank" rel="noopener">http://127.0.0.1:2379</a> –initial-cluster-token etcd-cluster-1 –initial-cluster cd0=<a href="http://127.0.0.1:2380,cd1=http://127.0.0.1:2480,cd2=http://127.0.0.1:2580" target="_blank" rel="noopener">http://127.0.0.1:2380,cd1=http://127.0.0.1:2480,cd2=http://127.0.0.1:2580</a> –initial-cluster-state new<br>上边的127.0.0.1:2380是终端执行的节点url<br>而127.0.0.1:2379的节点是2380端口节点要监听的节点。</p>
+<p>为上边的执行命令做个解析：<br>–name<br>etcd集群中的节点名，这里可以随意，可区分且不重复就行<br>–listen-peer-urls<br>监听的用于节点之间通信的url，可监听多个，集群内部将通过这些url进行数据交互(如选举，数据同步等)<br>–initial-advertise-peer-urls<br>建议用于节点之间通信的url，节点间将以该值进行通信。<br>–listen-client-urls<br>监听的用于客户端通信的url,同样可以监听多个。<br>–advertise-client-urls<br>建议使用的客户端通信url,该值用于etcd代理或etcd成员与etcd节点通信。<br>–initial-cluster-token etcd-cluster-1<br>节点的token值，设置该值后集群将生成唯一id,并为每个节点也生成唯一id,当使用相同配置文件再启动一个集群时，只要该token值不一样，etcd集群就不会相互影响。<br>–initial-cluster<br>也就是集群中所有的initial-advertise-peer-urls 的合集<br>–initial-cluster-state new<br>新建集群的标志，初始化状态使用 new，建立之后改此值为 existing</p>
+<p>##2.再在终端开启2个节点，组成一个集群<br>./etcd –name cd1 –initial-advertise-peer-urls <a href="http://127.0.0.1:2480" target="_blank" rel="noopener">http://127.0.0.1:2480</a> –listen-peer-urls <a href="http://127.0.0.1:2480" target="_blank" rel="noopener">http://127.0.0.1:2480</a> –listen-client-urls <a href="http://127.0.0.1:2479" target="_blank" rel="noopener">http://127.0.0.1:2479</a> –advertise-client-urls <a href="http://127.0.0.1:2479" target="_blank" rel="noopener">http://127.0.0.1:2479</a> –initial-cluster-token etcd-cluster-1 –initial-cluster cd0=<a href="http://127.0.0.1:2380,cd1=http://127.0.0.1:2480,cd2=http://127.0.0.1:2580" target="_blank" rel="noopener">http://127.0.0.1:2380,cd1=http://127.0.0.1:2480,cd2=http://127.0.0.1:2580</a> –initial-cluster-state new<br>这段命令是添加第二个节点，也可以通过go编程添加节点，只不过要用2479这个url通讯<br>./etcd –name cd2 –initial-advertise-peer-urls <a href="http://127.0.0.1:2580" target="_blank" rel="noopener">http://127.0.0.1:2580</a> –listen-peer-urls <a href="http://127.0.0.1:2580" target="_blank" rel="noopener">http://127.0.0.1:2580</a> –listen-client-urls <a href="http://127.0.0.1:2579" target="_blank" rel="noopener">http://127.0.0.1:2579</a> –advertise-client-urls <a href="http://127.0.0.1:2579" target="_blank" rel="noopener">http://127.0.0.1:2579</a> –initial-cluster-token etcd-cluster-1 –initial-cluster cd0=<a href="http://127.0.0.1:2380,cd1=http://127.0.0.1:2480,cd2=http://127.0.0.1:2580" target="_blank" rel="noopener">http://127.0.0.1:2380,cd1=http://127.0.0.1:2480,cd2=http://127.0.0.1:2580</a> –initial-cluster-state new<br>执行第三个节点，用2579通讯</p>
+<p>##3.查询 member 列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export ETCDCTL_API=3</span><br><span class="line">ENDPOINTS=127.0.0.1:2379,127.0.0.1:2479,127.0.0.1:2579</span><br><span class="line"></span><br><span class="line">./etcdctl --endpoints=$ENDPOINTS member list</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">98f0c6bf64240842, started, cd2, http://127.0.0.1:2580, http://127.0.0.1:2579</span><br><span class="line">bf9071f4639c75cc, started, cd0, http://127.0.0.1:2380, http://127.0.0.1:2379</span><br><span class="line">e3ba87c3b4858ef1, started, cd1, http://127.0.0.1:2480, http://127.0.0.1:2479</span><br></pre></td></tr></table></figure>
+<p>##4.添加 member 节点</p>
+<p><strong>member add</strong> 添加节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS member add cd3 --peer-urls=http://127.0.0.1:2180</span><br><span class="line">Member b9057cfdc8ff17ce added to cluster 9da8cd75487bd6dc</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ETCD_NAME=&quot;cd3&quot;</span><br><span class="line">ETCD_INITIAL_CLUSTER=&quot;cd2=http://127.0.0.1:2580,cd3=http://127.0.0.1:2180,cd0=http://127.0.0.1:2380,cd1=http://127.0.0.1:2480&quot;</span><br><span class="line">ETCD_INITIAL_ADVERTISE_PEER_URLS=&quot;http://127.0.0.1:2180&quot;</span><br><span class="line">ETCD_INITIAL_CLUSTER_STATE=&quot;existing&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>查询 member 节点列表信息</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS member list</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">98f0c6bf64240842, started, cd2, http://127.0.0.1:2580, http://127.0.0.1:2579</span><br><span class="line">b9057cfdc8ff17ce, unstarted, , http://127.0.0.1:2180, </span><br><span class="line">bf9071f4639c75cc, started, cd0, http://127.0.0.1:2380, http://127.0.0.1:2379</span><br><span class="line">e3ba87c3b4858ef1, started, cd1, http://127.0.0.1:2480, http://127.0.0.1:2479</span><br></pre></td></tr></table></figure>
+<p>通过查询结果可以发现：<code>http://127.0.0.1:2180</code> 显示状态为：<code>unstarted</code> </p>
+<p><strong>启动新节点</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./etcd --name cd3 --listen-client-urls http://127.0.0.1:2179 --advertise-client-urls http://127.0.0.1:2179 --listen-peer-urls http://127.0.0.1:2180 --initial-advertise-peer-urls http://127.0.0.1:2180 --initial-cluster-state existing --initial-cluster cd2=http://127.0.0.1:2580,cd0=http://127.0.0.1:2380,cd3=http://127.0.0.1:2180,cd1=http://127.0.0.1:2480 --initial-cluster-token etcd-cluster-1</span><br></pre></td></tr></table></figure>
+<p><strong>查询 member 节点列表信息</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS member list</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">98f0c6bf64240842, started, cd2, http://127.0.0.1:2580, http://127.0.0.1:2579</span><br><span class="line">b9057cfdc8ff17ce, started, cd3, http://127.0.0.1:2180, http://127.0.0.1:2179</span><br><span class="line">bf9071f4639c75cc, started, cd0, http://127.0.0.1:2380, http://127.0.0.1:2379</span><br><span class="line">e3ba87c3b4858ef1, started, cd1, http://127.0.0.1:2480, http://127.0.0.1:2479</span><br></pre></td></tr></table></figure>
+<p>##5.删除 member</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS member remove 21a304d74d267837</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Member b9057cfdc8ff17ce removed from cluster 9da8cd75487bd6dc</span><br></pre></td></tr></table></figure>
+<p><strong>查询 member 节点列表信息</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS member list</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">98f0c6bf64240842, started, cd2, http://127.0.0.1:2580, http://127.0.0.1:2579</span><br><span class="line">bf9071f4639c75cc, started, cd0, http://127.0.0.1:2380, http://127.0.0.1:2379</span><br><span class="line">e3ba87c3b4858ef1, started, cd1, http://127.0.0.1:2480, http://127.0.0.1:2479</span><br></pre></td></tr></table></figure>
+<p>##6.</p>
+<h2 id="添加-member-节点"><a href="#添加-member-节点" class="headerlink" title="添加 member 节点"></a>添加 member 节点</h2><p><strong>member add</strong> 添加节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS member add cd3 --peer-urls=http://127.0.0.1:2180</span><br><span class="line">Member b9057cfdc8ff17ce added to cluster 9da8cd75487bd6dc</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ETCD_NAME=&quot;cd3&quot;</span><br><span class="line">ETCD_INITIAL_CLUSTER=&quot;cd2=http://127.0.0.1:2580,cd3=http://127.0.0.1:2180,cd0=http://127.0.0.1:2380,cd1=http://127.0.0.1:2480&quot;</span><br><span class="line">ETCD_INITIAL_ADVERTISE_PEER_URLS=&quot;http://127.0.0.1:2180&quot;</span><br><span class="line">ETCD_INITIAL_CLUSTER_STATE=&quot;existing&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>查询 member 节点列表信息</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS member list</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">98f0c6bf64240842, started, cd2, http://127.0.0.1:2580, http://127.0.0.1:2579</span><br><span class="line">b9057cfdc8ff17ce, unstarted, , http://127.0.0.1:2180, </span><br><span class="line">bf9071f4639c75cc, started, cd0, http://127.0.0.1:2380, http://127.0.0.1:2379</span><br><span class="line">e3ba87c3b4858ef1, started, cd1, http://127.0.0.1:2480, http://127.0.0.1:2479</span><br></pre></td></tr></table></figure>
+<p>通过查询结果可以发现：<code>http://127.0.0.1:2180</code> 显示状态为：<code>unstarted</code> </p>
+<p><strong>启动新节点</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./etcd --name cd3 --listen-client-urls http://127.0.0.1:2179 --advertise-client-urls http://127.0.0.1:2179 --listen-peer-urls http://127.0.0.1:2180 --initial-advertise-peer-urls http://127.0.0.1:2180 --initial-cluster-state existing --initial-cluster cd2=http://127.0.0.1:2580,cd0=http://127.0.0.1:2380,cd3=http://127.0.0.1:2180,cd1=http://127.0.0.1:2480 --initial-cluster-token etcd-cluster-1</span><br></pre></td></tr></table></figure>
+<p><strong>查询 member 节点列表信息</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS member list</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">98f0c6bf64240842, started, cd2, http://127.0.0.1:2580, http://127.0.0.1:2579</span><br><span class="line">b9057cfdc8ff17ce, started, cd3, http://127.0.0.1:2180, http://127.0.0.1:2179</span><br><span class="line">bf9071f4639c75cc, started, cd0, http://127.0.0.1:2380, http://127.0.0.1:2379</span><br><span class="line">e3ba87c3b4858ef1, started, cd1, http://127.0.0.1:2480, http://127.0.0.1:2479</span><br></pre></td></tr></table></figure>
+<h2 id="删除-member"><a href="#删除-member" class="headerlink" title="删除 member"></a>删除 member</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS member remove 21a304d74d267837</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Member b9057cfdc8ff17ce removed from cluster 9da8cd75487bd6dc</span><br></pre></td></tr></table></figure>
+<p><strong>查询 member 节点列表信息</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./etcdctl --endpoints=$ENDPOINTS member list</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">98f0c6bf64240842, started, cd2, http://127.0.0.1:2580, http://127.0.0.1:2579</span><br><span class="line">bf9071f4639c75cc, started, cd0, http://127.0.0.1:2380, http://127.0.0.1:2379</span><br><span class="line">e3ba87c3b4858ef1, started, cd1, http://127.0.0.1:2480, http://127.0.0.1:2479</span><br></pre></td></tr></table></figure>
+<p>##7.执行go程序代码，增加或者删除节点<br>package main</p>
+<p>import (<br>    “github.com/coreos/etcd/clientv3”<br>    “context”<br>    “fmt”<br>    “time”<br>)</p>
+<p>//通过代码向网络添加和删除节点，配置这台电脑的url和超时保护<br>var (<br>    dialTimeout=5<em>time.Second<br>    requestTimeout=2</em>time.Second<br>    endPoints=[]string{“127.0.0.1:2379”}<br>)</p>
+<p>//添加节点<br>func addMember(cli *clientv3.Client,url string)  {<br>    peerURLs:=[]string {url}<br>    //向系统中插入节点<br>    _,err:=cli.MemberAdd(context.Background(),peerURLs)<br>    if err!=nil{<br>        fmt.Println(“memberadd”,err)<br>    }<br>    //显示插入的节点<br>    resp,err:=cli.MemberList(context.Background())<br>    if err!=nil{<br>        fmt.Println(“memberlist”,err)<br>    }<br>    fmt.Println(“添加后的members为”,resp.Members)</p>
+<p>}<br>func main()  {<br>    //运行之前终端先开启一个节点，再执行下边的代码，来链接终端那侧的节点，链接后这个cli其实就是个中介的角色，下边再进行给创建及删除节点，<br>    //新建的节点与终端执行的节点组成集群。<br>    cli,err:=clientv3.New(clientv3.Config{<br>        Endpoints:endPoints,<br>        DialTimeout:dialTimeout,<br>    })<br>    if err!=nil{<br>        fmt.Println(“clientv3 new”,err)<br>    }</p>
+<pre><code>fmt.Println(&quot;cli.Cluster:&quot;,cli)
+
+defer cli.Close()
+//添加新节点
+addMember(cli,&quot;127.0.0.1:2180&quot;)
+addMember(cli,&quot;127.0.0.1:2181&quot;)
+addMember(cli,&quot;127.0.0.1:2182&quot;)
+//删除节点
+//delMember(cli,0xe32088547caa8215)
+</code></pre><p>}<br>//删除节点<br>func delMember(cli *clientv3.Client,memberId uint64)  {<br>    _,err:=cli.MemberRemove(context.Background(),memberId)<br>    if err!=nil{<br>        fmt.Println(“delMember”,err)<br>    }else {<br>        fmt.Printf(“删除节点%s成功了\n”,memberId)<br>    }<br>}</p>
+<p>执行go编程创建的节点连接到集群，但是处于unstarted的状态<br>执行完 添加节点，需要打开终端启动节点服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./etcd --name cd3 --listen-client-urls http://127.0.0.1:2179 --advertise-client-urls http://127.0.0.1:2179 --listen-peer-urls http://127.0.0.1:2180 --initial-advertise-peer-urls http://127.0.0.1:2180 --initial-cluster-state existing --initial-cluster cd2=http://127.0.0.1:2580,cd0=http://127.0.0.1:2380,cd3=http://127.0.0.1:2180,cd1=http://127.0.0.1:2480 --initial-cluster-token etcd-cluster-1</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: '打赏支持', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'images/wechat.jpg',
+  alipayImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg'
+});
+</script>
+      
+            
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/06/11/虚拟货币的认识/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/05/29/分布式/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式终端与go编程添加和删除节点"><span class="nav-number">1.</span> <span class="nav-text">分布式终端与go编程添加和删除节点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加-member-节点"><span class="nav-number">1.1.</span> <span class="nav-text">添加 member 节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除-member"><span class="nav-number">1.2.</span> <span class="nav-text">删除 member</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2018 Hexo All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+<script src="/js/my.js"></script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
